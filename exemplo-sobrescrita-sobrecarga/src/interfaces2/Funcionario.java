@@ -1,30 +1,15 @@
-package sobrescrita;
+package interfaces2;
 
 public abstract class Funcionario {
 
-    protected long cpf;
     protected String nome;
+    protected long cpf;
     protected double salario;
 
-    // pode ser protected ou default também
     public abstract double calculaDesconto();
 
-    public String getTipoFuncionario() {
-        return "CLT";
-    }
-
-    public Funcionario(long cpf, String nome, double salario) {
-        this.cpf = cpf;
-        this.nome = nome;
-        this.salario = salario;
-    }
-
-    public long getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(long cpf) {
-        this.cpf = cpf;
+    public void fazAlgo() {
+        System.out.println("Teste");
     }
 
     public String getNome() {
@@ -33,6 +18,14 @@ public abstract class Funcionario {
 
     public void setNome(String nome) {
         this.nome = nome;
+    }
+
+    public long getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(long cpf) {
+        this.cpf = cpf;
     }
 
     public double getSalario() {
